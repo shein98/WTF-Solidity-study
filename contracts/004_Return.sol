@@ -22,7 +22,7 @@ contract Return {
         // Destructing assignment
         uint256 _number;
         bool _bool;
-        bool _bool2
+        bool _bool2;
         uint256[3] memory _array;
         (_number, _bool, _array) = returnNamed();
 
