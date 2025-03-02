@@ -10,7 +10,7 @@ contract Event {
     function _transfer(address from, address to, uint256 value) external  {
         _balance[from] = 100000;
         _balance[from] -= value;
-        _balance[to] += value;13_Inheritance
+        _balance[to] += value;
         emit Transfer(from, to, value);
     }
 }
