@@ -5,11 +5,12 @@ contract Error {
     // error TransferNotOwner();
 
     error TransferNotOwner(address sender);
+    mapping(uint256 => address) public _owners;
 
     function transferOwner1(uint256 tokenId, address newOwner) public {
         if (_owners[tokenId] != msg.sender) {
-            revert TransferNotOwner();
-            // revert TransferNotOwner(msg.sender);
+            // revert TransferNotOwner();
+            revert TransferNotOwner(msg.sender);
         }
         _owners[tokenId] = newOwner;
     }
